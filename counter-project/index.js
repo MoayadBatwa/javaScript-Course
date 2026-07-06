@@ -1,19 +1,23 @@
-let count;
 
-document.getElementById("decrease-button").onclick = function () {
-    count = document.getElementById("count-display").textContent;
-    count = Number(count);
+
+const decreaseBtn = document.getElementById("decrease-button");
+const resetBtn = document.getElementById("reset-button");
+const increaseBtn = document.getElementById("increase-button");
+const countDisplay = document.getElementById("count-display");
+
+let count = countDisplay.textContent;
+
+decreaseBtn.onclick = function () {
     count--;
-    document.getElementById("count-display").textContent = count;
+    countDisplay.textContent = count;
 }
 
-document.getElementById("reset-button").onclick = function () {
-    document.getElementById("count-display").textContent = 0;
+resetBtn.onclick = function () {
+    count = 0;
+    countDisplay.textContent = 0;
 }
 
-document.getElementById("increase-button").onclick = function () {
-    count = document.getElementById("count-display").textContent;
-    count = Number(count);
+increaseBtn.onclick = function () {
     count++;
-    document.getElementById("count-display").textContent = count;
+    countDisplay.textContent = count;
 }
