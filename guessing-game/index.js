@@ -1,27 +1,38 @@
 
+const minNum = 1;
+const maxNum = 2;
 
-let generatedNumber = Math.floor(Math.random() * 100 + 1);
-
-console.log(`generated: ${generatedNumber}`)
+const generatedNumber = Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
 
 window.alert("Welcome to Guess the Number Game!");
 
-window.alert("Try to guess the number between 1 to 100");
+window.alert(`Try to guess the number between ${minNum} to ${maxNum}`);
 
-userGuessedNumber = prompt("Enter your guessed number:");
+let attempts = 0;
+let userGuessedNumber = prompt("Enter your guessed number:");
 
-console.log(`user: ${userGuessedNumber}`)
+while (true) {
+    userGuessedNumber = Number(userGuessedNumber);
 
-while (userGuessedNumber != generatedNumber) {
-    if (userGuessedNumber < generatedNumber){
-        userGuessedNumber = prompt(`${userGuessedNumber} is smaller than the Generated Number`)
+    if (isNaN(userGuessedNumber)) {
+        userGuessedNumber = prompt("Please Enter a Number!");
     }
-    if (userGuessedNumber > generatedNumber){
-        userGuessedNumber = prompt(`${userGuessedNumber} is grater than the Generated Number`)
+    else if (userGuessedNumber < minNum || userGuessedNumber > maxNum) {
+        userGuessedNumber = prompt("Please Enter a Valid Number!");
+    }
+    else {
+        attempts++;
+
+        if (userGuessedNumber < generatedNumber) {
+            userGuessedNumber = prompt(`${userGuessedNumber} is smaller than the Generated Number`)
+        }
+        else if (userGuessedNumber > generatedNumber) {
+            userGuessedNumber = prompt(`${userGuessedNumber} is grater than the Generated Number`)
+        }
+        else {
+            window.alert(`Congratulation! You Guessed the ${generatedNumber} Number Right on ${attempts} attempts!`)
+            break;
+        }
     }
 }
-
-window.alert(`Congratulation! You Guessed the Number Right\nIt's ${generatedNumber}`)
-
-
 
