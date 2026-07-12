@@ -19,6 +19,6 @@ function convertFahrenheitToCelsius(fahrenheitDegree) {
 
 submitBtn.onclick = function () {
     degree = input.value;
-    result.textContent = CTF.checked ? `${convertCelsiusToFahrenheit(degree)} °F` : `${convertFahrenheitToCelsius(degree)} °C`;
+    result.textContent = CTF.checked ? `${convertCelsiusToFahrenheit(degree).toFixed(1)} °F` : FTC.checked ? `${convertFahrenheitToCelsius(degree).toFixed(1)} °C` : 'Select a Unit!';
 
 }
