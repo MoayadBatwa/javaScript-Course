@@ -43,6 +43,9 @@ label {
     border-radius: 5px;
     color: white;
 }
+#submitBtn:hover {
+    cursor: pointer;
+}
 
 #result {
     font-size: 20px;
