@@ -5,22 +5,30 @@ const images = document.getElementById("images");
 const dices = document.getElementById("dices");
 
 let ice = rolling.onclick = function() {
+    result.innerHTML = '';
 
-    let dices = [];
+    if (Math.floor(numDice.value) > 0) {
+        let dices = [];
 
-    for (let dice = 0; dice < numDice.value; dice++) {
+    for (let dice = 1; dice <= numDice.value; dice++) {
         let roll = Math.floor(Math.random() * 6) + 1;
 
         dices.push(roll);
+
+        const img = document.createElement('img');
+        img.src = `images/${roll}.png`;
+        result.appendChild(img);
         
     }
 
-    result.innerHTML = `Dice: ${[...dices].join(' - ')}<br>`;
+    const dice = document.createElement('p');
+    dice.textContent = `Dice: ${[...dices].join(' - ')}`;
+    result.prepend(dice);
 
-    for (const dice of dices) {
-        const img = document.createElement('img');
-        img.src = `images/${dice}.png`;
-        result.appendChild(img);
+    } else {
+        result.innerHTML = 'Enter a Valid Number!'
     }
+
+    
 }
 
