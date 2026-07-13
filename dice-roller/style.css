@@ -5,12 +5,22 @@ body {
     font-weight: bold;
 }
 
-button {
+#rolling {
     font-size: 20px;
     padding: 4px;
     background-color: rgb(127, 217, 255);
     border-radius: 10px;
+    opacity: 1;
+    transition: opacity 0.15s;
+}
 
+#rolling:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#rolling:active {
+    opacity: 0.3;
 }
 
 input {
@@ -18,11 +28,15 @@ input {
     padding: 4px;
     text-align: center;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
 }
 
 #image-result-container img {
     width: 100px;
     margin: 10px;
     border-radius: 10px;
+}
+
+#dices-result {
+    margin-bottom: 6px;
 }

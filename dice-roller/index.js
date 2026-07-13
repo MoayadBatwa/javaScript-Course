@@ -16,11 +16,12 @@ let ice = rolling.onclick = function() {
 
         const img = document.createElement('img');
         img.src = `images/${roll}.png`;
+        img.alt = `dice = ${roll}`;
         result.appendChild(img);
         
     }
 
-    dice.textContent = `Dice: ${[...dices].join(' - ')}`;
+    dice.textContent = `Dice: ${dices.join(' - ')}`;
 
     } else {
         result.innerHTML = 'Enter a Valid Number!'
