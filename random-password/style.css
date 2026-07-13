@@ -1,0 +1,39 @@
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#password-length {
+    padding: 8px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#checkbox-container {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+#generate-password-button {
+    padding: 8px;
+    background-color: hsl(197, 81%, 53%);
+    color: white;
+    font-size: 16px;
+    border-width: 0px;
+    border-radius: 5px
+}
+
+#generate-password-button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#generate-password-button:active {
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+#generated-password {
+    margin: 16px 0;
+    font-size: 20px;
+}
