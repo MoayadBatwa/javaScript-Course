@@ -1,8 +1,7 @@
 const numDice = document.getElementById("numDice");
 const rolling = document.getElementById('rolling');
-const result = document.getElementById("result-container");
-const images = document.getElementById("images");
-const dices = document.getElementById("dices");
+const result = document.getElementById("image-result-container");
+const dice = document.getElementById("dices-result");
 
 let ice = rolling.onclick = function() {
     result.innerHTML = '';
@@ -21,9 +20,7 @@ let ice = rolling.onclick = function() {
         
     }
 
-    const dice = document.createElement('p');
     dice.textContent = `Dice: ${[...dices].join(' - ')}`;
-    result.prepend(dice);
 
     } else {
         result.innerHTML = 'Enter a Valid Number!'

@@ -21,7 +21,7 @@ input {
     margin-bottom: 20px;
 }
 
-#result-container img {
+#image-result-container img {
     width: 100px;
     margin: 10px;
     border-radius: 10px;
