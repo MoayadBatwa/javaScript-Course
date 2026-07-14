@@ -2,36 +2,6 @@ array = [1,2,3,4,5,6,7,8,9];
 
 console.log(array);
 
-// ------------------ forEach
-
-console.log("=========forEach=========");
-
-array.forEach(print);
-
-function print(element) {
-    console.log(element);
-}
-
-// ------------------ map func out
-
-console.log("=========map func out=========");
-
-ar1 = array.map(double);
-console.log(ar1);
-
-function double(element) {
-    return element * 2;
-}
-
-
-// ------------------ map func in
-
-console.log("=========map func in=========");
-
-ar2 = array.map(function (element) {
-    return element * 3;
-});
-console.log(ar2);
 
 
 // ------------------ map func arrow
@@ -56,5 +26,59 @@ console.log("=========reduce=========");
 
 reduceAr = array.reduce((previous, current) => previous + current);
 console.log(reduceAr);
+
+
+// ------------------ forEach
+
+console.log("=========forEach=========");
+
+array.forEach(print);
+
+function print(element) {
+    console.log(element);
+}
+
+
+// ------------------ callback
+
+console.log("=========callback=========");
+
+func1(func2, array)
+
+function func1(func, element) {
+    for (let index = 0; index < element.length; index++) {
+        for (let j = 0; j < element[index]; j++) {
+            func(element[index]);
+            
+        }
+        
+    }
+    
+}
+function func2(element) {
+    console.log(element);
+}
+
+
+// ------------------ map func out
+
+console.log("=========map func out=========");
+
+ar1 = array.map(double);
+console.log(ar1);
+
+function double(element) {
+    return element * 2;
+}
+
+
+// ------------------ map func in
+
+console.log("=========map func in=========");
+
+ar2 = array.map(function (element) {
+    return element * 3;
+});
+console.log(ar2);
 
 
