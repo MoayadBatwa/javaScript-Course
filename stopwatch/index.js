@@ -11,18 +11,14 @@ function runStopwatch() {
         let hours = Math.floor(timer / 3600000);
         let minutes = Math.floor(timer / 60000 % 60);
         let seconds = Math.floor(timer / 1000 % 60);
-        let milliseconds = Math.floor(timer % 100);
+        let milliseconds = Math.floor(timer % 1000 / 10);
 
         hours = hours.toString().padStart(2, '0');
         minutes = minutes.toString().padStart(2, '0');
         seconds = seconds.toString().padStart(2, '0');
         milliseconds = milliseconds.toString().padStart(2, '0');
 
-
-
         timerString = `${hours}:${minutes}:${seconds}:${milliseconds}`;
-
-        console.log(timerString);
     }
 
     function timer() {
@@ -46,7 +42,7 @@ function startTimer() {
         timerId = setInterval(() => {
             stopwatch.updateStopwatch();
             document.getElementById("stopwatch").textContent = stopwatch.timer()
-        }, 1);
+        }, 10);
     }
 
 }
@@ -62,5 +58,5 @@ function resetTimer() {
     stopTimer();
     stopwatch = runStopwatch();
     isRunning = false;
-    document.getElementById("stopwatch").textContent = stopwatch.timer()
+    document.getElementById("stopwatch").textContent = stopwatch.timer();
 }
