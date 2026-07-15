@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="calculator-container">
+      <div id="display">100 / 43 + 100</div>
+      <div id="buttons-container">
+        <button
+          class="functional-btn"
+          id="plus-btn"
+          onclick="appendToDisplay(this)"
+        >
+          +
+        </button>
+        <button id="1-btn" onclick="appendToDisplay(this)">1</button>
+        <button id="2-btn" onclick="appendToDisplay(this)">2</button>
+        <button id="3-btn" onclick="appendToDisplay(this)">3</button>
+        <button
+          class="functional-btn"
+          id="minus-btn"
+          onclick="appendToDisplay(this)"
+        >
+          -
+        </button>
+        <button id="4-btn" onclick="appendToDisplay(this)">4</button>
+        <button id="5-btn" onclick="appendToDisplay(this)">5</button>
+        <button id="6-btn" onclick="appendToDisplay(this)">6</button>
+        <button
+          class="functional-btn"
+          id="times-btn"
+          onclick="appendToDisplay(this)"
+        >
+          *
+        </button>
+        <button id="7-btn" onclick="appendToDisplay(this)">7</button>
+        <button id="8-btn" onclick="appendToDisplay(this)">8</button>
+        <button id="9-btn" onclick="appendToDisplay(this)">9</button>
+        <button
+          class="functional-btn"
+          id="divide-btn"
+          onclick="appendToDisplay(this)"
+        >
+          /
+        </button>
+        <button id="0-btn" onclick="appendToDisplay(this)">0</button>
+        <button id="decimal-btn" onclick="appendToDisplay(this)">.</button>
+        <button id="equal-btn" onclick="calculateDisplay()">=</button>
+        <button class="functional-btn" id="clear-btn" onclick="clearDisplay()">
+          C
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
