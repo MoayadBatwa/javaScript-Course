@@ -1,4 +1,5 @@
-console.log(document);
+// console.log(document);
+console.dir(document);
 
 const docStyle = document.body.style;
 
@@ -15,16 +16,19 @@ docStyle.textAlign = "center";
 
 
 /*   DOM Navigation   */
-// 1. 
-// 2. 
-// 3. 
-// 4. 
-// 5. 
+// 1. .firstElementChild
+// 2. .lastElementChild
+// 3. .nextElementSibling
+// 4. .previousElementSibling
+// 5. .parentElement
+// 6. .children
 
 
+// ========= Element Selectors =========
 
-const fruits = document.getElementById('fruit-list');
-console.log(fruits);
+
+const fruits = document.getElementById('fruits-list');
+// console.log(fruits);
 
 
 // ----------------------------------
@@ -37,7 +41,7 @@ li.className = 'fruit';
 
 fruits.prepend(li);
 
-console.log(li);
+// console.log(li);
 
 // document.lastElementChild.append(li);
 
@@ -55,7 +59,7 @@ title[0].style.fontSize = '2rem';
 // ----------------------------------
 
 const liElements = document.getElementsByTagName('li');
-console.dir(liElements);
+// console.dir(liElements);
 
 Array.from(liElements).forEach(element => {
     element.style.backgroundColor = "black";
@@ -67,7 +71,7 @@ Array.from(liElements).forEach(element => {
 
 
 const firstList = document.querySelector('.title');
-console.dir(firstList);
+// console.dir(firstList);
 firstList.style.textDecoration = 'underline';
 
 
@@ -75,7 +79,7 @@ firstList.style.textDecoration = 'underline';
 
 
 const allLists = document.querySelectorAll('.title');
-console.dir(allLists);
+// console.dir(allLists);
 
 allLists.forEach(element => {
     element.style.backgroundColor = 'yellow';
@@ -83,3 +87,50 @@ allLists.forEach(element => {
 
 
 
+// ========= DOM Navigation =========
+
+const fruitList = document.getElementById('fruits-list');
+fruitList.firstElementChild.style.backgroundColor = 'red';
+
+// ---
+
+const lists = document.querySelectorAll('ul');
+console.dir(lists);
+lists.forEach(element => {
+    element.lastElementChild.style.background = 'linear-gradient(tomato, orange)'
+})
+
+
+// ------------------------
+
+
+const fruitElement = document.getElementById('tomato');
+fruitElement.previousElementSibling.style.background = 'linear-gradient(to right, cyan, brown)';
+
+// ---
+
+const aFruitList = document.getElementById("vegetables-list");
+const nextNextElement = aFruitList.nextElementSibling.nextElementSibling;
+
+console.dir(nextNextElement);
+nextNextElement.style.color = 'yellow';
+
+
+// ------------------------
+
+
+const child = document.getElementById('tomato');
+const itsParent = child.parentElement
+itsParent.style.backgroundColor = 'pink';
+
+const parents = document.getElementById('desserts-list');
+const itsChildren = parents.children;
+console.log(itsChildren);
+
+Array.from(itsChildren).forEach(child => {
+    const childTextLength = child.textContent.length
+    child.textContent += ` ${childTextLength}`;
+    child.style.textDecoration = 'underline'
+})
+
+itsChildren[0].style.background = 'linear-gradient(purple, green)';
