@@ -6,11 +6,20 @@ document.body.style.background = 'linear-gradient(to right,blue, red, yellow)';
 docStyle.color = 'white';
 docStyle.textAlign = "center";
 
-// 1. document.getElementById(); // Element or null
+/*   DOM Element Selectors   */
+// 1.** document.getElementById(); // Element or null
 // 2. document.getElementsByClassName(); // HTML Collection
 // 3. document.getElementsByTagName(); // HTML Collection
 // 4. document.querySelector(); // first match element or null
-// 5. document.querySelectorAll(); // NodeList - all matches
+// 5.** document.querySelectorAll(); // NodeList - all matches
+
+
+/*   DOM Navigation   */
+// 1. 
+// 2. 
+// 3. 
+// 4. 
+// 5. 
 
 
 
