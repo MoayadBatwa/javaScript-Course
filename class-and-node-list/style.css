@@ -1,0 +1,24 @@
+.myButton {
+    padding: 12px 24px;
+    margin: 18px;
+    font-size: 2rem;
+    display: block;
+    border: none;
+    border-radius: 10px
+}
+
+.enabled {
+    background-color: rgb(138, 206, 36);
+    color: white;
+}
+
+.hover {
+    background-color: green;
+    color: white;
+}
+
+.disabled {
+    background-color: rgb(193, 193, 193);
+    color: white;
+    text-decoration: line-through;
+}
