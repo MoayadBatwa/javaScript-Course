@@ -1,0 +1,10 @@
+#myBox {
+    font-size: 4rem;
+    background-color: greenyellow;
+    padding: 16px;
+    width: 100px;
+    text-align: center;
+    border-radius: 24px;
+    position: relative;
+    transition: background-color 0.15s;
+}
