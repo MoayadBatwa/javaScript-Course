@@ -21,7 +21,14 @@ docStyle.textAlign = "center";
 // 3. .nextElementSibling
 // 4. .previousElementSibling
 // 5. .parentElement
-// 6. .children
+// 6. .children // HTML Collection
+
+
+/*   DOM CreateNewElement   */
+// 1- CREATE
+// 2- Add ATTRIBUTES/PROPERTIES
+// 3- APPEND
+// 4- REMOVE
 
 
 // ========= Element Selectors =========
@@ -31,19 +38,6 @@ const fruits = document.getElementById('fruits-list');
 // console.log(fruits);
 
 
-// ----------------------------------
-
-
-let li = document.createElement('li');
-li.textContent = 'strawberry';
-li.id = 'add';
-li.className = 'fruit';
-
-fruits.prepend(li);
-
-// console.log(li);
-
-// document.lastElementChild.append(li);
 
 // ----------------------------------
 
@@ -112,7 +106,7 @@ fruitElement.previousElementSibling.style.background = 'linear-gradient(to right
 const aFruitList = document.getElementById("vegetables-list");
 const nextNextElement = aFruitList.nextElementSibling.nextElementSibling;
 
-console.dir(nextNextElement);
+// console.dir(nextNextElement);
 nextNextElement.style.color = 'yellow';
 
 
@@ -125,7 +119,7 @@ itsParent.style.backgroundColor = 'pink';
 
 const parents = document.getElementById('desserts-list');
 const itsChildren = parents.children;
-console.log(itsChildren);
+// console.log(itsChildren);
 
 Array.from(itsChildren).forEach(child => {
     const childTextLength = child.textContent.length
@@ -134,3 +128,45 @@ Array.from(itsChildren).forEach(child => {
 })
 
 itsChildren[0].style.background = 'linear-gradient(purple, green)';
+
+
+// ========= Create New Element =========
+
+
+const liNew = document.createElement('li');
+liNew.textContent = 'strawberry';
+liNew.id = 'strawberry';
+liNew.style.fontSize = '1.5rem';
+liNew.style.fontWeight = 'bold';
+
+
+// fruits.append(liNew);
+const test = document.getElementById('fruits-list');
+test.prepend(liNew);
+// document.lastElementChild.append(liNew);
+
+
+
+
+// Create
+const newList = document.createElement('div');
+
+// Add Properties/Attributes
+newList.class = 'title';
+newList.id = 'new-list'
+newList.textContent = '---- New List ----';
+newList.style.fontSize = "28px";
+newList.style.fontWeight = "bold";
+newList.style.color = 'blue';
+
+// Append
+// document.body.append(newList);
+document.getElementById('vegetables-list').append(newList);
+
+// Remove
+// document.getElementById('new-list').remove();
+
+
+
+
+
