@@ -4,14 +4,26 @@ let x = 0;
 let y = 0;
 let moveSpace = 10;
 
+
+// ------
+
+const myImg = document.getElementById('myImg');
+
+
 document.addEventListener('keydown', event => {
     myBox.style.backgroundColor = 'tomato';
     myBox.textContent = '🤕';
+    myImg.style.visibility = 'visible';
+    // myImg.style.display = 'block';
+    myImg.style.opacity = '1';
 });
 
 document.addEventListener('keyup', event => {
     myBox.style.backgroundColor = 'greenYellow';
     myBox.textContent = '😁';
+     myImg.style.visibility = 'hidden'
+    //  myImg.style.display = 'none';
+    myImg.style.opacity = '0';
 });
 
 document.addEventListener('keydown', event => {
