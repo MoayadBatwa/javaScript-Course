@@ -167,6 +167,32 @@ document.getElementById('vegetables-list').append(newList);
 // document.getElementById('new-list').remove();
 
 
+// ------------------------
 
+
+const newElement = document.createElement('li');
+
+newElement.textContent = 'New Element';
+newElement.style.color = "yellow";
+
+document.getElementById('desserts-list').insertBefore(newElement, document.getElementById('donuts'));
+
+
+
+const newElement2 = document.createElement('li');
+
+newElement2.textContent = 'New Element';
+newElement2.style.color = "black";
+
+const listOfElements = document.querySelectorAll('#desserts-list li');
+console.dir(listOfElements);
+document.getElementById('desserts-list').insertBefore(newElement2,listOfElements[2]);
+
+
+
+listOfElements[1].remove();
+
+
+document.getElementById('desserts-list').removeChild(document.getElementById('pancake'));
 
 
