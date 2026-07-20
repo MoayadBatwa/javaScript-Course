@@ -14,43 +14,52 @@ function playGame(playerChoice) {
     computerChoice = choices[(Math.floor(Math.random() * 3))];
     console.log(computerChoice);
 
+    playerChoiceDisplay.textContent = `Player: ${playerChoice}`;
+    computerChoiceDisplay.textContent = `Computer: ${computerChoice}`;
 
     result = '';
 
     if (playerChoice === computerChoice) {
         result = "IT'S A TIE!"
-        resultDisplay.textContent = result;
-        resultDisplay.classList.add('tie')
     } else {
 
         switch (playerChoice) {
             case "rock":
-                switch (computerChoice) {
-                    case "paper":
-                        result = 'YOU LOST!'
-                        resultDisplay.textContent = result
-                        resultDisplay.classList.add('lose')
-                    break;
-
-                    case "scissors":
-                        result = 'YOU WIN!'
-                        resultDisplay.textContent = result
-                        resultDisplay.classList.add('win')
-                    break;
-                }
-            break;
+                result = computerChoice === "scissors" ? "YOU WIN!" : "YOU LOST!"
+                break;
 
             case "paper":
-
-            break;
+                result = computerChoice === "rock" ? "YOU WIN!" : "YOU LOST!"
+                break;
 
             case "scissors":
-
-            break;
+                result = computerChoice === "paper" ? "YOU WIN!" : "YOU LOST!"
+                break;
 
         }
 
     }
+
+    resultDisplay.classList.remove('tie', 'win', 'lose')
+
+    switch (result) {
+        case "IT'S A TIE!":
+            resultDisplay.classList.add("tie");
+            break;
+
+        case "YOU WIN!":
+            resultDisplay.classList.add("win");
+            playerScoreDisplay.textContent = `${++playerScore}`
+            break;
+
+        case "YOU LOST!":
+            resultDisplay.classList.add("lose");
+            computerScoreDisplay.textContent = `${++computerScore}`
+            break;
+    }
+
+    resultDisplay.textContent = result;
+
 
 }
 

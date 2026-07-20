@@ -14,12 +14,13 @@ body {
 }
 
 .playerChoice {
-    padding: 16px;
-    margin: 16px;
+    padding: 8px;
+    margin: 8px;
     background-color: rgb(0, 166, 255);
     color: white;
     font-size: 2rem;
-    border-radius: 10px
+    border-radius: 120px;
+    width: 120px
 }
 
 .playerChoice:hover {
@@ -40,11 +41,11 @@ body {
 }
 
 .win {
-    color: greenyellow
+    color: rgb(43, 197, 29)
 }
 
 .lose {
-    color: tomato
+    color: rgb(230, 101, 79)
 }
 
 .tie {
