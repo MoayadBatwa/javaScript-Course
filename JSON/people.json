@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Moayad",
+        "age": 23,
+        "hobbies": [
+            "football",
+            "table tennis",
+            "walking"
+        ]
+    },
+    {
+        "name": "Mohammed",
+        "age": 21,
+        "hobbies": [
+            "football",
+            "work with sheep",
+            "watch series"
+        ]
+    },
+    {
+        "name": "Eyad",
+        "age": 17,
+        "hobbies": [
+            "football",
+            "table tennis",
+            "play video games"
+        ]
+    }
+]
