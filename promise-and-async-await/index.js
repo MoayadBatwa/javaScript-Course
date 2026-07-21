@@ -1,3 +1,5 @@
+// async/await make function to wait and return a Promise(resolve,reject)
+
 
 function walkDog() {
     return new Promise((resolve, reject) => {
@@ -10,7 +12,7 @@ function walkDog() {
             } else {
                 reject("You DID'T Walk the Dog!");
             }
-            
+
         }, 2500);
     })
 }
@@ -35,7 +37,7 @@ function takeOutTrash() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
 
-            const takeTrash = false;
+            const takeTrash = true;
 
             if (takeTrash) {
                 resolve('You Take Out the Trash ♻️');
@@ -47,14 +49,25 @@ function takeOutTrash() {
     })
 }
 
-walkDog().then(dog => {
-    console.log(dog);
-    return cleanKitchen();
-}).then(clean => {
-    console.log(clean);
-    return takeOutTrash();
-}).then(trash => {
-    console.log(trash);
-    console.log("All Chores Are Completed");
-}).catch(error => console.error(error));
+async function doChores() {
 
+    try {
+
+        const walkedDog = await walkDog();
+        console.log(walkedDog);
+
+        const cleanedKitchen = await cleanKitchen();
+        console.log(cleanedKitchen);
+
+        const tookOutTrash = await takeOutTrash();
+        console.log(tookOutTrash);
+
+        console.log("All Chores Are Completed");
+
+    } catch (error) {
+        console.error(error)
+    }
+
+}
+
+doChores();
