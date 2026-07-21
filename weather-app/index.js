@@ -52,11 +52,11 @@ async function getWeatherData(city) {
 function displayWeather(weatherData) {
     console.log(weatherData);
 
-    const city = `${weatherData.name}`;
-    const temp = `${(weatherData.main.temp - 273).toFixed(1)} °C`;
-    const humidity = `Humidity: ${weatherData.main.humidity}%`;
-    const description = `${weatherData.weather[0].description}`;
-    const weatherId = `${weatherData.weather[0].id}`;
+    const {
+        name: city,
+        main: { temp, humidity },
+        weather: [{ description, id }]
+    } = weatherData;
 
     weatherContainer.textContent = '';
     weatherContainer.style.display = 'flex';
@@ -67,11 +67,11 @@ function displayWeather(weatherData) {
     const descriptionDisplay = document.createElement('p');
     const emojiDisplay = document.createElement('p');
 
-    cityDisplay.textContent = city;
-    tempDisplay.textContent = temp;
-    humidityDisplay.textContent = humidity;
-    descriptionDisplay.textContent = description;
-    emojiDisplay.textContent = getEmojiWeather(weatherId);
+    cityDisplay.textContent = `${city}`;
+    tempDisplay.textContent = `${(temp - 273).toFixed(1)} °C`;
+    humidityDisplay.textContent = `Humidity: ${humidity}%`;
+    descriptionDisplay.textContent = `${description}`;
+    emojiDisplay.textContent = getEmojiWeather(id);
 
 
     cityDisplay.classList.add('cityDisplay');
