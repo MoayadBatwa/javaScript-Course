@@ -13,7 +13,8 @@ body {
 
 .logo {
     color:rgb(44, 174, 131);
-    font-weight: bold
+    font-weight: bold;
+    text-align: end;
 }
 
 .menu {
