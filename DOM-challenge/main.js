@@ -73,7 +73,7 @@ footer.setAttribute('class', 'footer');
 footer.style.setProperty('background-color','rgb(44, 174, 131');
 footer.style.setProperty('text-align', 'center');
 footer.style.setProperty('color','white');
-footer.style.setProperty('font-size','1.4rem');
+footer.style.setProperty('font-size','1.2rem');
 footer.style.setProperty('padding','16px 0px');
 
 
