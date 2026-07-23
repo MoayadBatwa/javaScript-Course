@@ -89,7 +89,7 @@ main.className = 'content';
 const getHeader = document.querySelector('header');
 getHeader.after(main);
 
-for (let index = 1; index <= 15; index++) {
+for (let index = 1; index <= 150; index++) {
     const product = document.createElement('div');
     product.className = 'product';
 

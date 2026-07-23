@@ -4,6 +4,9 @@ body {
     margin: 0px;
     box-sizing: border-box;
     height: 100vh;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 .header {
@@ -37,10 +40,11 @@ body {
 
 .content {
     display: grid;
-    height: calc(100vh - 110px);
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     margin: 10px;
+    /* enable internal scroll if items overflow */
+    overflow-y: auto;
 }
 
 .product {
