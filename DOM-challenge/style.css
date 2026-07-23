@@ -1,7 +1,9 @@
 body {
     font-family: Arial;
-    background-color: gray;
+    background-color: rgb(230, 230, 230);
     margin: 0px;
+    box-sizing: border-box;
+    height: 100vh;
 }
 
 .header {
@@ -12,7 +14,7 @@ body {
 }
 
 .logo {
-    color:rgb(44, 174, 131);
+    color: rgb(44, 174, 131);
     font-weight: bold;
     text-align: end;
 }
@@ -23,10 +25,33 @@ body {
     gap: 8px;
     color: gray;
     margin: 0;
+    font-size: 14px;
+    padding: 0px;
 }
 
 .menuHover {
     cursor: pointer;
     text-decoration: underline;
     color: rgb(91, 91, 91)
+}
+
+.content {
+    display: grid;
+    height: calc(100vh - 110px);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: 10px;
+}
+
+.product {
+    background-color: white;
+    color: rgb(159, 159, 159);
+    font-size: 11px;
+    padding: 16px;
+    border-radius: 10px;
+    border: 2px solid rgba(182, 132, 7, 0.449);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
